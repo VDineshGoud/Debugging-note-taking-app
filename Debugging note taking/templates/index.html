@@ -1,0 +1,45 @@
+{% extends 'note.html' %}
+
+{% block head %}
+<title>Notes</title>
+{% endblock %}
+{% block body %}
+<center>
+    <style>
+
+       h1{text-align: center;}
+        h2 {text-align: center;}
+        p {text-align: center;}
+        li{text-align: center;}
+        
+     
+     
+    </style> 
+    <h1 style='color:peru'>Notes</h1>
+    <br /><br />
+    <form method='POST'>
+        <div class="input-group flex-nowrap">
+
+            <span style="color:#ca0909;" class= "input-group-text" id="addon-wrapping">Enter Note</span>
+            <input name='notes' type="text" class="form-control" placeholder="Enter a Note" aria-label="Username"
+                aria-describedby="addon-wrapping">
+            <li><input name=' submit' type="submit" 
+                ></li>
+            
+                  
+
+        </div>
+    </form>
+
+    </form>
+    <br />
+    {% for note in notetaking %}
+    <div class="note">
+        <h2 style='color:rgb(236, 6, 6)'>{{ note }}
+        </h2>
+        <br />
+        <hr />
+    </div>
+    {% endfor %}
+</center>
+{% endblock %}
